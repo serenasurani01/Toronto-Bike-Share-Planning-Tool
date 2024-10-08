@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Location</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Pick up Location:</h2>
+        <p>{{ station_name }}</p>
+        <p><strong>Bikes at Station:</strong> {{ bikes_station_value }}</p>
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Select a location on the map</h2>
+    <form action="/" method="POST">
+        <div id="map"></div>
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+        <label for="date">Select a date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Select a time:</label><br>
+        <input type="time" id="time" name="time" required><br><br>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([43.64448415475745, -79.38036790117623], 13);
+
+        // Set up the OpenStreetMap layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Add a marker
+        var marker = L.marker([43.64448415475745, -79.38036790117623], {draggable: true}).addTo(map);
+
+        // When the marker is dragged, update latitude and longitude fields
+        marker.on('dragend', function (e) {
+            var position = marker.getLatLng();
+            document.getElementById('latitude').value = position.lat;
+            document.getElementById('longitude').value = position.lng;
+        });
+    </script>
+</body>
+</html>

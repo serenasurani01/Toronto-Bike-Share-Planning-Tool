@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #5d5d5d;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Container to center the content */
+.container {
+    max-width: 800px; /* Set a reasonable max width */
+    width: 100%; /* Ensure it takes up available space */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling for the input fields and submit button */
+input[type="date"],
+input[type="time"],
+input[type="submit"] {
+    width: 80%; /* Adjusted to 80% to keep it consistent */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 50%; /* Keep the submit button smaller */
+    padding: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Map Container */
+#map {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%; /* Full width inside the container */
+    height: 500px; /* Increase the height to make the map bigger */
+}
+
+/* Center the form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure that the title stays at the top */
+h2 {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Button to go back */
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
