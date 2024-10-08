@@ -22,6 +22,6 @@ Watch the demo video [here](https://youtu.be/yPUQJBBdPPM).
 2. **Data Preprocessing:** The data was cleaned and structured to ensure that there was a count for bikes available at any given station by minute. This involved filling in gaps where data was missing and aligning data points to ensure accurate availability tracking.  
 3. **Data Segmentation:** The data was segmented by time of year, day of the week, and time of day, allowing the app to capture recurring patterns in bike demand.  
 4. **Time Series Analysis**: I applied time series analysis to forecast bike availability at specific stations for future dates and times based on historical trends.  
-5. **App Integration: **The time series analysis was integrated into a Flask app, where users can input their location, date, and time to receive a forecast of bike availability at the closest station.
+5. **App Integration:** The time series analysis was integrated into a Flask app, where users can input their location, date, and time to receive a forecast of bike availability at the closest station.
 
 
